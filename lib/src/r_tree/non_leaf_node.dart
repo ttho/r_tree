@@ -41,11 +41,11 @@ class NonLeafNode<E> extends Node<E> {
     return overlappingLeafs;
   }
 
-  Node<E> insert(RTreeDatum<E> item) {
+  Node<E>? insert(RTreeDatum<E> item) {
     include(item);
 
     Node<E> bestNode = _getBestNodeForInsert(item);
-    Node<E> splitNode = bestNode.insert(item);
+    Node<E>? splitNode = bestNode.insert(item);
 
     if (splitNode != null) {
       addChild(splitNode);
@@ -92,9 +92,9 @@ class NonLeafNode<E> extends Node<E> {
   }
 
   Node<E> _getBestNodeForInsert(RTreeDatum<E> item) {
-    num bestCost = core_constant.double.infinity;
+    num bestCost = double.infinity;
     num tentativeCost;
-    Node<E> bestNode;
+    Node<E>? bestNode;
 
     for (var child in _childNodes) {
       tentativeCost = child.expansionCost(item);
@@ -104,11 +104,11 @@ class NonLeafNode<E> extends Node<E> {
       }
     }
 
-    return bestNode;
+    return bestNode!;
   }
 
   _convertToLeafNode() {
-    var nonLeafParent = parent as NonLeafNode<E>;
+    var nonLeafParent = parent as NonLeafNode<E>?;
     if (nonLeafParent == null) return;
 
     var newLeafNode = new LeafNode<E>(this.branchFactor);

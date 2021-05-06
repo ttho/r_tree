@@ -5,18 +5,18 @@ author: Taylor Anderson <taylor.anderson@workiva.com>
 homepage: https://github.com/Workiva/r_tree
 
 environment:
-  sdk: '>=1.24.3 <3.0.0'
+  sdk: ">=2.12.3 <3.0.0"
 dependencies:
-  dart2_constant: ^1.0.0
+ # dart2_constant: any
 dev_dependencies:
   benchmark_harness: any
-  build_runner: ">=0.6.0 <2.0.0"
-  build_test: ">=0.9.0 <2.0.0"
-  build_web_compilers: ">=0.2.0 <3.0.0"
-  coverage: ">=0.10.0 <0.13.0"
-  dart_dev: ^2.2.0
-  dart_style: ^1.0.9
-  test: ">=0.12.30 <2.0.0"
+  build_runner: ^2.0.2
+  build_test: any
+  build_web_compilers: any
+  coverage: any
+ # dart_dev: any
+  dart_style: any
+  test: any
 
 transformers:
   - $dart2js:

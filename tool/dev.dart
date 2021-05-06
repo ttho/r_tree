@@ -17,16 +17,16 @@ library tool.dev;
 
 import 'dart:async';
 
-import 'package:dart_dev/dart_dev.dart' show dev, config;
+//import 'package:dart_dev/dart_dev.dart' show dev, config;
 
 Future<Null> main(List<String> args) async {
-  config.analyze
-    ..strong = true
-    ..fatalLints = true
-    ..entryPoints = ['benchmark/', 'lib/', 'test/', 'example/'];
-  
-  config.format
-    ..paths = ['benchmark/', 'lib/', 'test/', 'example/'];
-
-  await dev(args);
+  // config.analyze
+  //   ..strong = true
+  //   ..fatalLints = true
+  //   ..entryPoints = ['benchmark/', 'lib/', 'test/', 'example/'];
+  //
+  // config.format
+  //   ..paths = ['benchmark/', 'lib/', 'test/', 'example/'];
+  //
+  // await dev(args);
 }
