@@ -1,3 +1,5 @@
+This is a fork to provide null-safety. To achieve null-safety a lot of dependencies had to be updated which I do not know about, which is why I did fork rather than  create a pull request.
+
 # RTree [![Build Status](https://travis-ci.org/Workiva/r_tree.svg)](https://travis-ci.org/Workiva/r_tree)
 
 A recursive RTree library written in Dart. This R-tree implementation is used to index and query two-dimensional data. Items are inserted and balanced via the RTree class and can then be queried by Rectangle.  The balancing can be tweaked by modifying the branch factor of the RTree.
